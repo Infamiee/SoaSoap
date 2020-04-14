@@ -1,4 +1,5 @@
 from suds.client import Client
+#pip install suds-py3
 url = "http://DESKTOP-FNJE4AO:8088/mockApiPortSoap11?wsdl"
 client = Client(url)
 register_call = client.service.registerCall("Kuba")
