@@ -1,9 +1,14 @@
 from suds.client import Client
 #pip install suds-py3
-url = "http://DESKTOP-FNJE4AO:8088/mockApiPortSoap11?wsdl"
+url = "http://localhost:8088/mockApiPortSoap11?wsdl"
 client = Client(url)
 register_call = client.service.registerCall("Kuba")
 results = client.service.results("Kuba")
-print(register_call,results,sep="\n")
+print("Register_call:")
+print("Name: "+register_call.name)
+print("Note: "+register_call.note)
+
+print("Results:")
+print('\n'.join(results))
 
 
